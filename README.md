@@ -1,5 +1,7 @@
 # ProcBuffer
 
+Status: [![Build Status](https://travis-ci.org/LittleStevieBrule/proc-buffer.svg?branch=master)](https://travis-ci.org/LittleStevieBrule/proc-buffer)
+
 A dirt simple Proc buffer 
 
 
