@@ -6,39 +6,35 @@ class ProcBuffer
   include Enumerable
 
   def initialize(*actions)
-    @actions = actions
+    # For now we will not handle actions that do not respond to #call
+    @actions = actions.select { |action| action.respond_to?(:call) }
   end
 
-  attr_reader :actions
+  def actions
+    @actions.dup
+  end
 
   def each
-    actions.each { |action| yield action }
+    @actions.each { |action| yield action }
   end
 
   def run
-    map { |action| call(action) }
+    map(&:call)
   end
 
   def reverse_run
-    actions.reverse.map { |action| call(action) }
+    @actions.reverse.map { |action| call(action) }
   end
 
   def append(&block)
-    actions << block 
+    @actions << block
   end
 
   alias push append
 
-  def call(obj)
-    obj.respond_to?(:call) ? obj.call : obj
-  end
-
   def pop(n = nil)
-    pop = proc do
-      actions.last.respond_to?(:call) ? actions.pop.call : actions.pop
-    end
-    return pop.call unless n
-    (1..n).map { pop.call }
+    return @actions.pop.call unless n
+    (1..n).map { @actions.pop.call }
   end
 end
 
