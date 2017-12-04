@@ -1,5 +1,9 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.4.2
+- 2.4.2
 before_install: gem install bundler -v 1.16.0
+deploy:
+  provider: rubygems
+  api_key:
+    secure: zLXrS5uF6sGDA+k/bpqKmA41WQTqFXp3WHIeAw7kw2B/WGHbDXOamXj/cKxJvrqC74pwT1SGB+kqZz4pw6mZFCzi06TVWS43gB+neNAkXNtRpcVEzHAr5fIzZghMm4Q3iKbLa7L91cG9oaqYSL8Yq/t6D2/DfPEj1Enh8MU6H4HMTc228GnnLuybya3axZTQt69GLD5/zYe0IOJk3nNg/DoZ6TAwen4NwOKIrYxa0GVsv6R1o9zNbo/e92VI/Iiepr3v5uLvZsOPs393fN2Vv9wrlIIPkI4ekHmN6CBy68yyW4QQfd33dmhbPbSjpAb+5s00X4Lk+Rzgp/wakTplYgql7a3lCvNK70iXugW0mmTpSDjk/4KUi2WRADxw7c6DvJMFQ0SfuxVjmm8146qoLYHFBQtvNl88b43kIGLrfrWVHucRBiEOXKCfJvumOv9xrT6bilntwyl85OOZ4Qe0leb0TazknUTuJj9C0bEwiGf7vwVeiUvUqe8j+aJxOcAS7lNo1HP5tfsZ0A2XiaS4alKXlbKHhaZg+fnZU/LNGz4qnYD6TAUPU5hk2ZxZb841/lJqcKy6Ub6h1cOZYBpU41xVdGJs52HftZdQLx/RqJUDtOFOxxq1oCxrb+wgqv0v86GhxBcgYZgJiqwbl+JOBDmag48Gl8NbpIIhfduP78U=
