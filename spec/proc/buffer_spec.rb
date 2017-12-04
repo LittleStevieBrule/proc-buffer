@@ -35,6 +35,5 @@ RSpec.describe ProcBuffer do
       @buffer.run
       expect(result).to eq 2
     end
-
   end
 end

@@ -37,4 +37,3 @@ class ProcBuffer
     (1..n).map { @actions.pop.call }
   end
 end
-
