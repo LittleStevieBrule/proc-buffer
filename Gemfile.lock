@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    proc-buffer (0.1.1)
+    proc_buffer-buffer (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -27,7 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  proc-buffer!
+  proc_buffer-buffer!
   rake (~> 10.0)
   rspec (~> 3.0)
 

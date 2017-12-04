@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'proc_buffer/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'proc-buffer'
+  spec.name          = 'proc_buffer-buffer'
   spec.version       = ProcBuffer::VERSION
   spec.authors       = ['Little Stevie Brule']
   spec.email         = ['stephendmcguckin@gmail.com']
