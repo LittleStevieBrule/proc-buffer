@@ -1,3 +1,3 @@
 class ProcBuffer
-  VERSION = '0.1.4'.freeze
+  VERSION = '0.1.'.freeze
 end
